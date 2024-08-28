@@ -1,0 +1,37 @@
+<div class="container-fluid mt-3">
+    <div class="header">
+        <span>Project List</span>
+    </div>
+    <div *ngIf="!errorMessage; else error" class="content">
+        <div *ngIf="!isLoading; else spinner" class="row mt-4">
+            <div
+                *ngIf="!projects.length; else projectList"
+                class="empty-project mt-3"
+            >
+                <span>No projects found.</span>
+            </div>
+            <ng-template #projectList>
+                <div
+                    class="col-lg-3 col-sm-4 card-deck"
+                    *ngFor="let project of projects; trackBy: trackByFn"
+                    (click)="gotoProjectDetail(project)"
+                >
+                    <app-project-card [project]="project"></app-project-card>
+                </div>
+            </ng-template>
+        </div>
+        <ng-template #spinner>
+            <div class="container">
+                <mat-spinner
+                    class="mat-spinner mx-auto"
+                    [diameter]="30"
+                ></mat-spinner>
+            </div>
+        </ng-template>
+    </div>
+    <ng-template #error>
+        <div class="mt-5">
+            <span class="error">{{ errorMessage }}</span>
+        </div>
+    </ng-template>
+</div>

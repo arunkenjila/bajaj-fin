@@ -1,0 +1,51 @@
+<div
+    class="card rounded-0 shadow-sm border-light mb-3"
+    style="max-width: 18rem"
+>
+    <div class="card-header border-bottom-0 bg-transparent">
+        <span class="name">
+            {{ project?.projectName }}
+        </span>
+    </div>
+    <div class="card-body">
+        <p>{{ project?.description }}</p>
+    </div>
+    <div
+        class="card-footer mt-3 border-top-0 bg-transparent text-body-secondary d-flex justify-content-start"
+    >
+        <div class="due-date d-flex flex-row">
+            <div class="d-flex flex-row align-items-center">
+                <mat-icon class="timelapse-icon">timelapse</mat-icon>
+                <span class="ms-2">{{ project?.dueDate }}</span>
+            </div>
+        </div>
+
+        <div class="footer-end mt-2 d-flex flex-row align-items-center">
+            <div class="avatar">
+                <img
+                    *ngFor="let people of project?.people"
+                    [src]="people.avatar"
+                    height="30"
+                    width="30"
+                />
+            </div>
+            <div class="issue d-flex flex-column">
+                <div class="d-flex flex-row align-items-center">
+                    <mat-icon>bug_report</mat-icon>
+                    {{ project?.issues }} issues
+                </div>
+                <mat-progress-bar
+                    [matTooltip]="
+                        project?.completed +
+                        ' completed  ' +
+                        project?.pending +
+                        ' pending'
+                    "
+                    class="mt-2"
+                    mode="determinate"
+                    [value]="getValue(project?.issues, project?.completed)"
+                ></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+</div>

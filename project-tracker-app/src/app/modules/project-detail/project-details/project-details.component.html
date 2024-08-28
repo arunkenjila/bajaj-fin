@@ -1,0 +1,40 @@
+<div class="container-fluid mt-3">
+    <div class="header d-flex flex-row align-items-center">
+        <div>
+            <span>Project Name : {{ selectedProject?.projectName }}</span>
+            <br />
+            <span class="sub">Project ID: {{ selectedProject?.id }}</span>
+            <div class="avatar-container d-flex flex-row mt-2">
+                <img
+                    *ngFor="let person of people"
+                    [src]="person.avatar"
+                    height="30"
+                    width="30"
+                />
+                <div class="add-avatar">
+                    <button mat-stroked-button color="primary">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button
+                (click)="gotoCreateTask()"
+                mat-stroked-button
+                color="primary"
+            >
+                <mat-icon>add</mat-icon>
+                Create new task
+            </button>
+        </div>
+    </div>
+
+    <div class="hr mt-2 mb-2"></div>
+    <span class="task-name mt-3 ms-3">Tasks</span>
+    <app-task-list
+        [tasks]="tasks"
+        [people]="people"
+        (changeAssignee)="changeAssignee($event)"
+    ></app-task-list>
+</div>

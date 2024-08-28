@@ -1,0 +1,119 @@
+{
+    "projects": [
+        {
+            "id": "1345kbj5",
+            "projectName": "Apollo",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et metus luctus, gravida sem vitae",
+            "dueDate": "07 Sep 2024",
+            "issues": 12,
+            "pending": 3,
+            "completed": 9,
+            "people": [
+                {
+                    "name": "abc",
+                    "avatar": "assets/av1.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av2.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av3.png"
+                }
+            ]
+        },
+        {
+            "id": "2wew4542",
+            "projectName": "Lubix",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et metus luctus, gravida sem vitae",
+            "dueDate": "18 Nov 2024",
+            "issues": 45,
+            "pending": 30,
+            "completed": 15,
+            "people": [
+                {
+                    "name": "abc",
+                    "avatar": "assets/av1.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av2.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av3.png"
+                }
+            ]
+        },
+        {
+            "id": "sd33434f",
+            "projectName": "Neptune",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et metus luctus, gravida sem vitae",
+            "dueDate": "12 Sep 2024",
+            "issues": 30,
+            "pending": 13,
+            "completed": 17,
+            "people": [
+                {
+                    "name": "abc",
+                    "avatar": "assets/av1.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av2.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av3.png"
+                }
+            ]
+        },
+        {
+            "id": "d4sdlkn",
+            "projectName": "Backend",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et metus luctus, gravida sem vitae",
+            "dueDate": "24 Oct 2024",
+            "issues": 16,
+            "pending": 6,
+            "completed": 10,
+            "people": [
+                {
+                    "name": "abc",
+                    "avatar": "assets/av1.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av2.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av3.png"
+                }
+            ]
+        },
+        {
+            "id": "asa5sds",
+            "projectName": "Apollo UI",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et metus luctus, gravida sem vitae",
+            "dueDate": "03 Nov 2024",
+            "issues": 25,
+            "pending": 10,
+            "completed": 15,
+            "people": [
+                {
+                    "name": "abc",
+                    "avatar": "assets/av1.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av2.png"
+                },
+                {
+                    "name": "abc",
+                    "avatar": "assets/av3.png"
+                }
+            ]
+        }
+    ]
+}

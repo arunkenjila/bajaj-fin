@@ -1,0 +1,62 @@
+<div class="task-container p-3">
+    <div
+        class="task mb-2 ps-2 pe-2"
+        *ngFor="let task of tasks; trackBy: trackByFn"
+    >
+        <div class="d-flex flex-row align-items-center">
+            <mat-icon>bookmark_border</mat-icon>
+            <span class="me-4 id">{{ task.id }}</span>
+            <span class="title">{{ task.title }}</span>
+        </div>
+        <div class="task-end">
+            <div class="w100">
+                <span
+                    class="me-2 id"
+                    [ngClass]="{
+                        cg: task.status === 'Completed',
+                        cr: task.status === 'Hold',
+                        cy: task.status === 'Inprogress'
+                    }"
+                    >{{ task.status }}</span
+                >
+            </div>
+            <div class="w80">
+                <span
+                    class="title"
+                    [ngClass]="{
+                        cg: task.priority === 'Low',
+                        cr: task.priority === 'High',
+                        cy: task.priority === 'Medium'
+                    }"
+                    >{{ task.priority }}</span
+                >
+            </div>
+            <div class="assign">
+                <span class="title">{{ task.assign }}</span>
+                <div class="">
+                    <button
+                        class="btn"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <ng-container
+                            *ngFor="let person of people; trackBy: trackByFn"
+                        >
+                            <li
+                                (click)="
+                                    changeProjectAssignee(task.id, person.name)
+                                "
+                            >
+                                <a class="dropdown-item">{{ person.name }}</a>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

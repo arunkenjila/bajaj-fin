@@ -1,0 +1,24 @@
+.header {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 auto;
+    max-width: 100% !important;
+    border-radius: 16px !important;
+    box-shadow: 0px 0px 4px 0px #00000017 !important;
+}
+
+.project-details {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 400;
+}

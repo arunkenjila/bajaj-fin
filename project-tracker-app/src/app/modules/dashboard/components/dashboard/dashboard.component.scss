@@ -1,0 +1,99 @@
+.header {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.card {
+    flex: 1 0 auto;
+    max-width: 100% !important;
+    border-radius: 16px !important;
+    box-shadow: 0px 0px 4px 0px #00000017 !important;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-body {
+    height: 100px;
+    max-height: 100px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar {
+    max-width: 100px;
+    background-color: red;
+}
+
+.footer-end {
+    justify-content: space-between;
+}
+
+.priority {
+    width: 50px;
+    background-color: grey;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.issue {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timelapse-icon {
+    color: rgb(212, 73, 73);
+}
+
+.due-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(212, 73, 73);
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100px;
+    border-radius: 10px;
+    background-color: green;
+    color: white !important;
+}
+
+.error {
+    color: rgb(212, 73, 73);
+    font-size: 16px;
+    align-self: center;
+}
+
+.card-deck {
+    cursor: pointer;
+}
+
+.empty-project {
+    font-size: 16px;
+    align-self: center;
+}

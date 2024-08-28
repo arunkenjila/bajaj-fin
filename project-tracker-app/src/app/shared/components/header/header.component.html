@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg pt-0 pb-0">
+    <div class="container-fluid">
+        <div class="logo" (click)="commonService.gotoHome()">
+            <img src="assets/logo.png" height="60" width="80" />
+        </div>
+        <div *ngIf="!isInCreateProjectPage">
+            <button
+                (click)="commonService.gotoCreateProject()"
+                mat-flat-button
+                color="primary"
+            >
+                CREATE
+            </button>
+        </div>
+    </div>
+</nav>
+<div class="hr"></div>

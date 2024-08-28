@@ -1,0 +1,75 @@
+<form
+    [formGroup]="projectFormGroup"
+    class="form-group-container p-3 mx-auto mt-3"
+    autocomplete="on"
+    (submit)="onSubmit()"
+>
+    <div class="form-container p-3">
+        <span class="header d-flex justify-content-center mb-4 form-header"
+            >Create Project</span
+        >
+        <mat-form-field appearance="outline">
+            <mat-label>Project Name</mat-label>
+            <input
+                matInput
+                placeholder="Project name"
+                formControlName="projectName"
+            />
+            <mat-error>Required fields</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input
+                matInput
+                placeholder="Description"
+                formControlName="description"
+            />
+            <mat-error>Required fields</mat-error>
+        </mat-form-field>
+        <mat-form-field
+            class="example-full-width"
+            appearance="fill"
+            class="mb-3"
+        >
+            <mat-label>Due date</mat-label>
+            <input
+                matInput
+                [min]="minDate"
+                [max]="maxDate"
+                [matDatepicker]="picker"
+                formControlName="dueDate"
+            />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Priority</mat-label>
+            <mat-select formControlName="priority">
+                <mat-option
+                    *ngFor="let mpriority of priorityArray; trackBy: trackByFn"
+                    [value]="mpriority"
+                    >{{ mpriority }}</mat-option
+                >
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+                <mat-option
+                    *ngFor="let status of statusArray; trackBy: trackByFn"
+                    [value]="status"
+                    >{{ status }}</mat-option
+                >
+            </mat-select>
+        </mat-form-field>
+        <div class="btn-container">
+            <button mat-flat-button color="primary" type="submit">
+                submit
+            </button>
+        </div>
+    </div>
+</form>
