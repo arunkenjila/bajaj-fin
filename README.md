@@ -1,2 +1,7 @@
 # bajaj-fin
-Assignment
+
+# Install
+
+```
+
+```
